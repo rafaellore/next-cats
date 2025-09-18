@@ -2,7 +2,7 @@
 
 export default async function loginAction(email: string, password: string) {
   try {
-    const res = await fetch(`process.env.API_URL/users/login`, {
+    const res = await fetch(process.env.API_URL + "/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
