@@ -2,13 +2,16 @@
 
 export default async function postLike(postId: number, userId: number) {
   try {
-    const response = await fetch(`process.env.API_URL/posts/${postId}/like`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ userId }),
-    });
+    const response = await fetch(
+      process.env.API_URL + `/posts/${postId}/like`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId }),
+      }
+    );
 
     if (!response.ok) {
       throw new Error("Erro ao dar/remover like.");
