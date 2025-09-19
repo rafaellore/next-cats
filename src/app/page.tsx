@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import getPosts from "@/actions/getPosts";
 import FeedPosts from "@/components/photo/photo.component";
 

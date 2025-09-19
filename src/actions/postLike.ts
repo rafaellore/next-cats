@@ -10,6 +10,7 @@ export default async function postLike(postId: number, userId: number) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ userId }),
+        cache: "no-store",
       }
     );
 
